@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Xml2spreadsheet-dev] DTD Validation Of XML
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/xml2spreadsheet-dev/2006-December/index.html" >
+   <LINK REL="made" HREF="mailto:xml2spreadsheet-dev%40lists.berlios.de?Subject=Re%3A%20%5BXml2spreadsheet-dev%5D%20DTD%20Validation%20Of%20XML&In-Reply-To=%3C91ae21990612041908w2b7a3f4le46f16d0ff346059%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000015.html">
+   <LINK REL="Next"  HREF="000017.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Xml2spreadsheet-dev] DTD Validation Of XML</H1>
+    <B>Subhash Chandran</B> 
+    <A HREF="mailto:xml2spreadsheet-dev%40lists.berlios.de?Subject=Re%3A%20%5BXml2spreadsheet-dev%5D%20DTD%20Validation%20Of%20XML&In-Reply-To=%3C91ae21990612041908w2b7a3f4le46f16d0ff346059%40mail.gmail.com%3E"
+       TITLE="[Xml2spreadsheet-dev] DTD Validation Of XML">subwiz at gmail.com
+       </A><BR>
+    <I>Tue Dec  5 04:08:48 CET 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000015.html">[Xml2spreadsheet-dev] DTD Validation Of XML
+</A></li>
+        <LI>Next message: <A HREF="000017.html">[Xml2spreadsheet-dev] DTD Validation Of XML
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>The issue is with technical difficulty. We have to maintain a version
+of DTD for each version of the application in the site.
+
+We will definitely give the users DTD for their own validation. But my
+point is, we should not enforce the users to supply DOCTYPE header
+specifying DTD. A flexibility like this makes it so much easier to
+write a new Ant script (unlike us, build.xml I believe does not have a
+DTD) or a Maven pom.xml.
+
+This article seems to address my original question, validating XML
+against an arbitrary DTD:
+
+<A HREF="http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html">http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html</A>
+
+Subhash.
+
+On 12/4/06, Sivasundaram Umapathy &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">siva at sivasundaram.com</A>&gt; wrote:
+&gt;<i> XML without DTD? I feel no. Even it would help the users to have a
+</I>&gt;<i> first level of validation before they invoke the API. This is what I feel.
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i> Siva
+</I>&gt;<i>
+</I>&gt;<i> On 12/4/06, Subhash Chandran &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">subwiz at gmail.com</A>&gt; wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; At present I am working on this bug:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> <A HREF="https://developer.berlios.de/bugs/?func=detailbug&amp;group_id=6203&amp;bug_id=9591">https://developer.berlios.de/bugs/?func=detailbug&amp;group_id=6203&amp;bug_id=9591</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I am wondering if I can request XML input from users without the DTD
+</I>&gt;<i> &gt; DOCTYPE header, but internally validate the XML against the DTD
+</I>&gt;<i> &gt; packaged in the Jar. All the googled results show otherwise. Can
+</I>&gt;<i> &gt; anyone of you throw some light on this?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --
+</I>&gt;<i> &gt; Regards,
+</I>&gt;<i> &gt; Subhash Chandran S
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; <A HREF="http://wiztools.org/project/XML2SpreadSheet/">http://wiztools.org/project/XML2SpreadSheet/</A>
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; Xml2spreadsheet-dev mailing list
+</I>&gt;<i> &gt; <A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">Xml2spreadsheet-dev at lists.berlios.de</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Xml2spreadsheet-dev mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">Xml2spreadsheet-dev at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+-- 
+Regards,
+Subhash Chandran S
+
+<A HREF="http://wiztools.org/project/XML2SpreadSheet/">http://wiztools.org/project/XML2SpreadSheet/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000015.html">[Xml2spreadsheet-dev] DTD Validation Of XML
+</A></li>
+	<LI>Next message: <A HREF="000017.html">[Xml2spreadsheet-dev] DTD Validation Of XML
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev">More information about the Xml2spreadsheet-dev
+mailing list</a><br>
+</body></html>

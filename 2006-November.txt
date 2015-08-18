@@ -1,0 +1,120 @@
+From subwiz at gmail.com  Wed Nov 29 07:03:52 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Wed, 29 Nov 2006 11:33:52 +0530
+Subject: [Xml2spreadsheet-dev] Technology Preview Release
+Message-ID: <91ae21990611282203y7c83e78asa06cca6893ac890f@mail.gmail.com>
+
+Details here:
+
+http://jroller.com/page/jcraze?entry=xml2spreadsheet_technology_preview
+
+-- 
+Regards,
+Subhash Chandran S
+
+
+From subwiz at gmail.com  Wed Nov 29 15:38:01 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Wed, 29 Nov 2006 20:08:01 +0530
+Subject: [Xml2spreadsheet-dev] API To Access Functionality Of XML2SpreasSheet
+Message-ID: <91ae21990611290638t6c5d4716hf2c49b0e7753909c@mail.gmail.com>
+
+I know this is a bad design, but the current API exposed for
+generating xls from xml is done this way:
+
+~~~~ Code Start ~~~~
+
+       try{
+           WorkBookCreator wbc = WorkBookCreatorFactory.getWorkBookCreator();
+           XML2XLSGenerator gen = new XML2XLSGenerator();
+           // Following line is capable of throwing Exception:
+           gen.parse((WorkBookGenerationHandler)wbc, new
+FileInputStream(arg[0]));
+           WorkBook workBook = wbc.getWorkBook();
+           workBook.write(new FileOutputStream(arg[1]));
+       } catch(...
+
+~~~~ Code End ~~~~
+
+Basically if we see, there is one input and one output:
+
+* Input -> InputStream for reading XML
+* Output -> OutputStream for writing XLS
+
+I find the above API too complex for such an operation. Immediately on
+seeing this issue, the design which comes to my mind is having a
+static method in a public class which accepts these two inputs and
+does the processing.
+
+But so far in my life, I don't remember seeing such an API for doing some job:
+
+PublicClass.generateXLS(InputStream, OutputStream);
+
+Your comments and opinion on this!
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From BALASUBRAMANI at sella.it  Thu Nov 30 12:25:33 2006
+From: BALASUBRAMANI at sella.it (BALASUBRAMANI S D)
+Date: Thu, 30 Nov 2006 16:55:33 +0530
+Subject: [Xml2spreadsheet-dev] API To Access Functionality Of
+	XML2SpreasSheet
+In-Reply-To: <91ae21990611290638t6c5d4716hf2c49b0e7753909c@mail.gmail.com>
+References: <91ae21990611290638t6c5d4716hf2c49b0e7753909c@mail.gmail.com>
+Message-ID: <456EBFAD.3090406@sella.it>
+
+Yes. This kind of method is already requested by the Krishnaswamy  when 
+they have used it in his  project.
+
+Regards,
+Bala.
+
+Subhash Chandran wrote:
+> I know this is a bad design, but the current API exposed for
+> generating xls from xml is done this way:
+>
+> ~~~~ Code Start ~~~~
+>
+>        try{
+>            WorkBookCreator wbc = WorkBookCreatorFactory.getWorkBookCreator();
+>            XML2XLSGenerator gen = new XML2XLSGenerator();
+>            // Following line is capable of throwing Exception:
+>            gen.parse((WorkBookGenerationHandler)wbc, new
+> FileInputStream(arg[0]));
+>            WorkBook workBook = wbc.getWorkBook();
+>            workBook.write(new FileOutputStream(arg[1]));
+>        } catch(...
+>
+> ~~~~ Code End ~~~~
+>
+> Basically if we see, there is one input and one output:
+>
+> * Input -> InputStream for reading XML
+> * Output -> OutputStream for writing XLS
+>
+> I find the above API too complex for such an operation. Immediately on
+> seeing this issue, the design which comes to my mind is having a
+> static method in a public class which accepts these two inputs and
+> does the processing.
+>
+> But so far in my life, I don't remember seeing such an API for doing some job:
+>
+> PublicClass.generateXLS(InputStream, OutputStream);
+>
+> Your comments and opinion on this!
+>
+>   
+
+Le e-mail provenienti dalla Banca Sella Spa sono trasmesse in buona fede e non comportano alcun vincolo ne' creano obblighi per la Banca Sella Spa  stessa, salvo che cio' non sia espressamente previsto da un precedente accordo.
+Questa e-mail e' confidenziale. Qualora l'avesse ricevuta per errore, La preghiamo di comunicarne via e-mail la ricezione al mittente e di distruggerne il contenuto. La informiamo inoltre che l'utilizzo non autorizzato del messaggio o dei suoi allegati potrebbe costituire reato.
+Grazie per la collaborazione.
+
+E-mails from Banca Sella Spa are sent in good faith but they are neither binding on the Banca Sella Spa nor to be understood as creating any obligation on its part except where provided for an agreement. This e-mail is confidential. If you have received it by mistake, please inform the sender by reply e-mail and delete it from your system. Please also note that the unauthorized disclosure or use of the message or any attachments could be an offence.
+Thank you for your cooperation
+
+

@@ -1,0 +1,889 @@
+From siva at sivasundaram.com  Fri Dec  1 17:40:35 2006
+From: siva at sivasundaram.com (Sivasundaram Umapathy)
+Date: Fri, 1 Dec 2006 22:10:35 +0530
+Subject: [Xml2spreadsheet-dev] API To Access Functionality
+	OfXML2SpreasSheet
+References: <91ae21990611290638t6c5d4716hf2c49b0e7753909c@mail.gmail.com>
+	<456EBFAD.3090406@sella.it>
+Message-ID: <003801c71568$5d918b30$6b00a8c0@indy>
+
+I don't see any problems with the approach you mentioned.
+
+Regards
+Siva
+
+
+
+From subwiz at gmail.com  Sat Dec  2 07:21:49 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 11:51:49 +0530
+Subject: [Xml2spreadsheet-dev] API To Access Functionality
+	OfXML2SpreasSheet
+In-Reply-To: <003801c71568$5d918b30$6b00a8c0@indy>
+References: <91ae21990611290638t6c5d4716hf2c49b0e7753909c@mail.gmail.com>
+	<456EBFAD.3090406@sella.it> <003801c71568$5d918b30$6b00a8c0@indy>
+Message-ID: <91ae21990612012221h6364f76jb6c0f5e5a0d1684d@mail.gmail.com>
+
+I have written a new API class for this:
+
+http://svn.berlios.de/wsvn/xml2spreadsheet/trunk/src/main/java/org/wiztools/xml2spreadsheet/XML2SpreadSheet.java?op=file&rev=0&sc=0
+
+Subhash.
+
+On 12/1/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+> I don't see any problems with the approach you mentioned.
+>
+> Regards
+> Siva
+>
+> _______________________________________________
+> Xml2spreadsheet-dev mailing list
+> Xml2spreadsheet-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+>
+
+
+From subwiz at gmail.com  Sat Dec  2 07:32:40 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 12:02:40 +0530
+Subject: [Xml2spreadsheet-dev] IP Issues In Test Case
+Message-ID: <91ae21990612012232t23a9cb36x296457f83e9ef5d4@mail.gmail.com>
+
+Hi,
+
+We need to remove this code from our source tree due to possible IP issues:
+
+src/test/resources/poi_large.xml
+
+Can someone prepare a reasonably large test case XML in replacement of this?
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Sat Dec  2 13:01:28 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 17:31:28 +0530
+Subject: [Xml2spreadsheet-dev] Site Updated
+Message-ID: <91ae21990612020401y305d16daq2b4307891946c93e@mail.gmail.com>
+
+The site has been updated:
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+Project team page added:
+
+http://wiztools.org/project/XML2SpreadSheet/team-list.html
+
+If any information above is incomplete or wrong, change the pom.xml
+accordingly and commit (or let me know).
+
+The home page now has API usage and command-line usage instructions.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Sat Dec  2 13:17:13 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 17:47:13 +0530
+Subject: [Xml2spreadsheet-dev] Project Roadmap
+Message-ID: <91ae21990612020417l72033b0eyef6a78d6e622e829@mail.gmail.com>
+
+This roadmap is for explaining the how we focus on what we deliver. I
+have not attached any timeline with this.
+
+Priority-wise arranged:
+
+* Make application functional on all features promised. First in POI,
+later incorporate it to JXL implementation. The feature request &
+bugs:
+https://developer.berlios.de/feature/?group_id=6203
+https://developer.berlios.de/bugs/?group_id=6203
+
+* Announce to JXL and POI community existence of this project--I will
+be doing this shortly.
+
+* Market this application:
+  -> Have the URL as mail signature
+  -> Post in ur blogs
+  -> Digg (after we have a good alpha release)
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Sat Dec  2 13:22:38 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 17:52:38 +0530
+Subject: [Xml2spreadsheet-dev] Implementation Switching Using System Property
+Message-ID: <91ae21990612020422p72e22425p68ba6264de62c3a4@mail.gmail.com>
+
+Currently the implementation engine--be it be POI or JXL--usage of it
+is defined during the runtime using the system parameter
+"xml2xls.impl=jxl" or "xml2xls.impl=poi".
+
+This is not a model which will work well in J2EE environment. We need
+to rethink this design issue too.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Sat Dec  2 13:33:04 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 18:03:04 +0530
+Subject: [Xml2spreadsheet-dev] [ANN] New Project Based On POI And JXL:
+	XML2SpreadSheet
+Message-ID: <91ae21990612020433p47e97881ke225f66eae0b2d45@mail.gmail.com>
+
+Hi All,
+
+I have launched a new project to create from XML excel sheets:
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+It is in nascent stage.
+
+Interested people can give inputs.
+
+-- 
+Thanks & Regards,
+Subhash Chandran S
+
+
+From subwiz at gmail.com  Sat Dec  2 14:05:16 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 18:35:16 +0530
+Subject: [Xml2spreadsheet-dev] [ANN] New Project Based On POI And JExcelAPI:
+	XML2SpreadSheet
+Message-ID: <91ae21990612020505i32d26987y84211c2970aea348@mail.gmail.com>
+
+Hi All,
+
+I have launched a new project to create from XML excel sheets:
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+It is in nascent stage.
+
+Interested people can give inputs.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From siva at sivasundaram.com  Sat Dec  2 18:43:19 2006
+From: siva at sivasundaram.com (Sivasundaram Umapathy)
+Date: Sat, 2 Dec 2006 23:13:19 +0530
+Subject: [Xml2spreadsheet-dev] License
+Message-ID: <017001c71639$5edbf990$b800a8c0@indy>
+
+We need to define the licensing model for this project. Once defined, we need to add the License header 
+to the source code.
+
+Regards
+Siva
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/xml2spreadsheet-dev/attachments/20061202/435bf400/attachment.html>
+
+From subwiz at gmail.com  Sat Dec  2 18:52:44 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sat, 2 Dec 2006 23:22:44 +0530
+Subject: [Xml2spreadsheet-dev] License
+In-Reply-To: <017001c71639$5edbf990$b800a8c0@indy>
+References: <017001c71639$5edbf990$b800a8c0@indy>
+Message-ID: <91ae21990612020952q1411af82t18d69e2e02c32f46@mail.gmail.com>
+
+It is in Public Domain. Anyone can use it any way they want! This is
+the original model I had thought upon, and registered the project with
+this. If anyone of you have difference of opinion, please tell.
+
+Regards,
+Subhash.
+
+On 12/2/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+>
+>
+> We need to define the licensing model for this project. Once defined, we
+> need to add the License header
+> to the source code.
+>
+> Regards
+> Siva
+> _______________________________________________
+> Xml2spreadsheet-dev mailing list
+> Xml2spreadsheet-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+>
+>
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Sat Dec  2 19:47:48 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Sun, 3 Dec 2006 00:17:48 +0530
+Subject: [Xml2spreadsheet-dev] License
+In-Reply-To: <91ae21990612020952q1411af82t18d69e2e02c32f46@mail.gmail.com>
+References: <017001c71639$5edbf990$b800a8c0@indy>
+	<91ae21990612020952q1411af82t18d69e2e02c32f46@mail.gmail.com>
+Message-ID: <91ae21990612021047w6aed0805k992214e448c1395a@mail.gmail.com>
+
+I just had a look at another very popular public domain tool:
+http://www.antlr.org/
+
+Their source code does not have any "public domain" header. Probably
+we can also follow the same model.
+
+Subhash.
+
+On 12/2/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> It is in Public Domain. Anyone can use it any way they want! This is
+> the original model I had thought upon, and registered the project with
+> this. If anyone of you have difference of opinion, please tell.
+>
+> Regards,
+> Subhash.
+>
+> On 12/2/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+> >
+> >
+> > We need to define the licensing model for this project. Once defined, we
+> > need to add the License header
+> > to the source code.
+> >
+> > Regards
+> > Siva
+> > _______________________________________________
+> > Xml2spreadsheet-dev mailing list
+> > Xml2spreadsheet-dev at lists.berlios.de
+> > https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> >
+> >
+> >
+>
+>
+> --
+> Regards,
+> Subhash Chandran S
+>
+> http://wiztools.org/project/XML2SpreadSheet/
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Mon Dec  4 10:19:33 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Mon, 4 Dec 2006 14:49:33 +0530
+Subject: [Xml2spreadsheet-dev] DTD Validation Of XML
+Message-ID: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+
+At present I am working on this bug:
+
+https://developer.berlios.de/bugs/?func=detailbug&group_id=6203&bug_id=9591
+
+I am wondering if I can request XML input from users without the DTD
+DOCTYPE header, but internally validate the XML against the DTD
+packaged in the Jar. All the googled results show otherwise. Can
+anyone of you throw some light on this?
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From siva at sivasundaram.com  Mon Dec  4 18:10:18 2006
+From: siva at sivasundaram.com (Sivasundaram Umapathy)
+Date: Mon, 4 Dec 2006 22:40:18 +0530
+Subject: [Xml2spreadsheet-dev] DTD Validation Of XML
+In-Reply-To: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+References: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+Message-ID: <c1d5f0a80612040910u7b7ff5b5s5415b36619207e7d@mail.gmail.com>
+
+XML without DTD? I feel no. Even it would help the users to have a
+first level of validation before they invoke the API. This is what I feel.
+
+Regards
+Siva
+
+On 12/4/06, Subhash Chandran <subwiz at gmail.com> wrote:
+>
+> At present I am working on this bug:
+>
+>
+> https://developer.berlios.de/bugs/?func=detailbug&group_id=6203&bug_id=9591
+>
+> I am wondering if I can request XML input from users without the DTD
+> DOCTYPE header, but internally validate the XML against the DTD
+> packaged in the Jar. All the googled results show otherwise. Can
+> anyone of you throw some light on this?
+>
+> --
+> Regards,
+> Subhash Chandran S
+>
+> http://wiztools.org/project/XML2SpreadSheet/
+> _______________________________________________
+> Xml2spreadsheet-dev mailing list
+> Xml2spreadsheet-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/xml2spreadsheet-dev/attachments/20061204/f89b0461/attachment.html>
+
+From subwiz at gmail.com  Tue Dec  5 04:08:48 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 08:38:48 +0530
+Subject: [Xml2spreadsheet-dev] DTD Validation Of XML
+In-Reply-To: <c1d5f0a80612040910u7b7ff5b5s5415b36619207e7d@mail.gmail.com>
+References: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+	<c1d5f0a80612040910u7b7ff5b5s5415b36619207e7d@mail.gmail.com>
+Message-ID: <91ae21990612041908w2b7a3f4le46f16d0ff346059@mail.gmail.com>
+
+The issue is with technical difficulty. We have to maintain a version
+of DTD for each version of the application in the site.
+
+We will definitely give the users DTD for their own validation. But my
+point is, we should not enforce the users to supply DOCTYPE header
+specifying DTD. A flexibility like this makes it so much easier to
+write a new Ant script (unlike us, build.xml I believe does not have a
+DTD) or a Maven pom.xml.
+
+This article seems to address my original question, validating XML
+against an arbitrary DTD:
+
+http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html
+
+Subhash.
+
+On 12/4/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+> XML without DTD? I feel no. Even it would help the users to have a
+> first level of validation before they invoke the API. This is what I feel.
+>
+> Regards
+> Siva
+>
+> On 12/4/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> >
+> > At present I am working on this bug:
+> >
+> >
+> https://developer.berlios.de/bugs/?func=detailbug&group_id=6203&bug_id=9591
+> >
+> > I am wondering if I can request XML input from users without the DTD
+> > DOCTYPE header, but internally validate the XML against the DTD
+> > packaged in the Jar. All the googled results show otherwise. Can
+> > anyone of you throw some light on this?
+> >
+> > --
+> > Regards,
+> > Subhash Chandran S
+> >
+> > http://wiztools.org/project/XML2SpreadSheet/
+> > _______________________________________________
+> > Xml2spreadsheet-dev mailing list
+> > Xml2spreadsheet-dev at lists.berlios.de
+> >
+> https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> >
+>
+>
+> _______________________________________________
+> Xml2spreadsheet-dev mailing list
+> Xml2spreadsheet-dev at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+>
+>
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 04:15:14 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 08:45:14 +0530
+Subject: [Xml2spreadsheet-dev] DTD Validation Of XML
+In-Reply-To: <91ae21990612041908w2b7a3f4le46f16d0ff346059@mail.gmail.com>
+References: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+	<c1d5f0a80612040910u7b7ff5b5s5415b36619207e7d@mail.gmail.com>
+	<91ae21990612041908w2b7a3f4le46f16d0ff346059@mail.gmail.com>
+Message-ID: <91ae21990612041915h6de301a7v2dd9c79e28bf66cb@mail.gmail.com>
+
+Following this up, I have created a new feature request:
+
+https://developer.berlios.de/feature/index.php?func=detailfeature&feature_id=2941&group_id=6203
+
+"cli option to generate template XML"
+
+I will work on this.
+
+Subhash.
+
+On 12/5/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> The issue is with technical difficulty. We have to maintain a version
+> of DTD for each version of the application in the site.
+>
+> We will definitely give the users DTD for their own validation. But my
+> point is, we should not enforce the users to supply DOCTYPE header
+> specifying DTD. A flexibility like this makes it so much easier to
+> write a new Ant script (unlike us, build.xml I believe does not have a
+> DTD) or a Maven pom.xml.
+>
+> This article seems to address my original question, validating XML
+> against an arbitrary DTD:
+>
+> http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html
+>
+> Subhash.
+>
+> On 12/4/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+> > XML without DTD? I feel no. Even it would help the users to have a
+> > first level of validation before they invoke the API. This is what I feel.
+> >
+> > Regards
+> > Siva
+> >
+> > On 12/4/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> > >
+> > > At present I am working on this bug:
+> > >
+> > >
+> > https://developer.berlios.de/bugs/?func=detailbug&group_id=6203&bug_id=9591
+> > >
+> > > I am wondering if I can request XML input from users without the DTD
+> > > DOCTYPE header, but internally validate the XML against the DTD
+> > > packaged in the Jar. All the googled results show otherwise. Can
+> > > anyone of you throw some light on this?
+> > >
+> > > --
+> > > Regards,
+> > > Subhash Chandran S
+> > >
+> > > http://wiztools.org/project/XML2SpreadSheet/
+> > > _______________________________________________
+> > > Xml2spreadsheet-dev mailing list
+> > > Xml2spreadsheet-dev at lists.berlios.de
+> > >
+> > https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> > >
+> >
+> >
+> > _______________________________________________
+> > Xml2spreadsheet-dev mailing list
+> > Xml2spreadsheet-dev at lists.berlios.de
+> > https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> >
+> >
+> >
+>
+>
+> --
+> Regards,
+> Subhash Chandran S
+>
+> http://wiztools.org/project/XML2SpreadSheet/
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Mon Dec  4 10:35:47 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Mon, 4 Dec 2006 15:05:47 +0530
+Subject: [Xml2spreadsheet-dev] [ANN] New Project Based On POI And JXL:
+	XML2SpreadSheet
+In-Reply-To: <4573E449.20006@yahoo.it>
+References: <91ae21990612020433p47e97881ke225f66eae0b2d45@mail.gmail.com>
+	<4573E449.20006@yahoo.it>
+Message-ID: <91ae21990612040135y1fbfa33dw823ab8602ac714a3@mail.gmail.com>
+
+Good to know that u r working in similar lines. Right now we don't
+want to expand our scope to bring in logic of xls->xml. The xml->xls
+is the immediate usecase we are focusing to implement.
+
+Regards,
+Subhash.
+
+> Great, I'm just working in a project where I need to convert XLS to XML
+> and viceversa.
+> I'm working direclty with POI and dom4j to produce XML from XLS, your
+> project also provide or will provide an XLS->XML conversion?? It will be
+> interesting...
+> Regards
+> Chiacchiera con i tuoi amici in tempo reale!
+>  http://it.yahoo.com/mail_it/foot/*http://it.messenger.yahoo.com
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: poi-user-unsubscribe at jakarta.apache.org
+> Mailing List:     http://jakarta.apache.org/site/mail2.html#poi
+> The Apache Jakarta Poi Project:  http://jakarta.apache.org/poi/
+>
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 11:40:25 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 16:10:25 +0530
+Subject: [Xml2spreadsheet-dev] DTD Validation Of XML
+In-Reply-To: <91ae21990612041915h6de301a7v2dd9c79e28bf66cb@mail.gmail.com>
+References: <91ae21990612040119h2c71a1dbv3415eab7047eaeb4@mail.gmail.com>
+	<c1d5f0a80612040910u7b7ff5b5s5415b36619207e7d@mail.gmail.com>
+	<91ae21990612041908w2b7a3f4le46f16d0ff346059@mail.gmail.com>
+	<91ae21990612041915h6de301a7v2dd9c79e28bf66cb@mail.gmail.com>
+Message-ID: <91ae21990612050240t7054b0begd5e2bda33fea9c87@mail.gmail.com>
+
+DTD validation is not possible using javax.xml.validation APIs:
+
+http://java.sun.com/j2se/1.5.0/docs/api/javax/xml/validation/SchemaFactory.html
+
+Thinking of converting our DTD to RelaxNG or XML Schema (using
+http://people.apache.org/~andyc/neko/doc/dtd/index.html). I personally
+favor RelaxNG because all my attempts to learn XML Schema has ended in
+failure because of its complexity!
+
+But I will miss the beautifully generated DTDDoc maven plugin :-(
+
+http://www.wiztools.org/project/XML2SpreadSheet/dtddoc/index.html
+
+Subhash.
+
+On 12/5/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> Following this up, I have created a new feature request:
+>
+> https://developer.berlios.de/feature/index.php?func=detailfeature&feature_id=2941&group_id=6203
+>
+> "cli option to generate template XML"
+>
+> I will work on this.
+>
+> Subhash.
+>
+> On 12/5/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> > The issue is with technical difficulty. We have to maintain a version
+> > of DTD for each version of the application in the site.
+> >
+> > We will definitely give the users DTD for their own validation. But my
+> > point is, we should not enforce the users to supply DOCTYPE header
+> > specifying DTD. A flexibility like this makes it so much easier to
+> > write a new Ant script (unlike us, build.xml I believe does not have a
+> > DTD) or a Maven pom.xml.
+> >
+> > This article seems to address my original question, validating XML
+> > against an arbitrary DTD:
+> >
+> > http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html
+> >
+> > Subhash.
+> >
+> > On 12/4/06, Sivasundaram Umapathy <siva at sivasundaram.com> wrote:
+> > > XML without DTD? I feel no. Even it would help the users to have a
+> > > first level of validation before they invoke the API. This is what I feel.
+> > >
+> > > Regards
+> > > Siva
+> > >
+> > > On 12/4/06, Subhash Chandran <subwiz at gmail.com> wrote:
+> > > >
+> > > > At present I am working on this bug:
+> > > >
+> > > >
+> > > https://developer.berlios.de/bugs/?func=detailbug&group_id=6203&bug_id=9591
+> > > >
+> > > > I am wondering if I can request XML input from users without the DTD
+> > > > DOCTYPE header, but internally validate the XML against the DTD
+> > > > packaged in the Jar. All the googled results show otherwise. Can
+> > > > anyone of you throw some light on this?
+> > > >
+> > > > --
+> > > > Regards,
+> > > > Subhash Chandran S
+> > > >
+> > > > http://wiztools.org/project/XML2SpreadSheet/
+> > > > _______________________________________________
+> > > > Xml2spreadsheet-dev mailing list
+> > > > Xml2spreadsheet-dev at lists.berlios.de
+> > > >
+> > > https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> > > >
+> > >
+> > >
+> > > _______________________________________________
+> > > Xml2spreadsheet-dev mailing list
+> > > Xml2spreadsheet-dev at lists.berlios.de
+> > > https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-dev
+> > >
+> > >
+> > >
+> >
+> >
+> > --
+> > Regards,
+> > Subhash Chandran S
+> >
+> > http://wiztools.org/project/XML2SpreadSheet/
+> >
+>
+>
+> --
+> Regards,
+> Subhash Chandran S
+>
+> http://wiztools.org/project/XML2SpreadSheet/
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 10:36:00 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 15:06:00 +0530
+Subject: [Xml2spreadsheet-dev] Notification mail
+In-Reply-To: <45753B12.1020500@sella.it>
+References: <45753B12.1020500@sella.it>
+Message-ID: <91ae21990612050136o12900c50p2f7eb80c32ce4f9f@mail.gmail.com>
+
+Sure, that is possible:
+
+https://developer.berlios.de/docman/display_doc.php?docid=458&group_id=2
+
+So if u go through this, u will see that we need a separate mailing
+list for this. I have created xml2spreadsheet-svn at lists.berlios.de
+mailing list for this purpose--the thing is it will take about 6-24
+hrs to create this mailing list. After this gets created, u can add ur
+self to this mailing list.
+
+Regards,
+Subhash.
+
+On 12/5/06, BALASUBRAMANI S D <BALASUBRAMANI at sella.it> wrote:
+> Subhash,
+>     Is it possible to add notification mail for all commits in
+> XML2Spreadsheet ?
+>
+> Regards,
+> Bala.
+>
+> Le e-mail provenienti dalla Banca Sella Spa sono trasmesse in buona fede e non comportano alcun vincolo ne' creano obblighi per la Banca Sella Spa  stessa, salvo che cio' non sia espressamente previsto da un precedente accordo.
+> Questa e-mail e' confidenziale. Qualora l'avesse ricevuta per errore, La preghiamo di comunicarne via e-mail la ricezione al mittente e di distruggerne il contenuto. La informiamo inoltre che l'utilizzo non autorizzato del messaggio o dei suoi allegati potrebbe costituire reato.
+> Grazie per la collaborazione.
+>
+> E-mails from Banca Sella Spa are sent in good faith but they are neither binding on the Banca Sella Spa nor to be understood as creating any obligation on its part except where provided for an agreement. This e-mail is confidential. If you have received it by mistake, please inform the sender by reply e-mail and delete it from your system. Please also note that the unauthorized disclosure or use of the message or any attachments could be an offence.
+> Thank you for your cooperation
+>
+
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 15:01:29 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 19:31:29 +0530
+Subject: [Xml2spreadsheet-dev] svn commit list active
+Message-ID: <91ae21990612050601j68de50cbi973e9d5dccd3c842@mail.gmail.com>
+
+Those who wish to get informed of commit messages, add ur self here:
+
+https://lists.berlios.de/mailman/listinfo/xml2spreadsheet-svn
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 15:11:37 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 19:41:37 +0530
+Subject: [Xml2spreadsheet-dev] The Path Towards RelaxNG
+Message-ID: <91ae21990612050611v5f666c0at76abe599380fae39@mail.gmail.com>
+
+I have converted our DTD to relaxng format.
+
+But while executing validation test on this, I got the exception:
+
+java.lang.IllegalArgumentException: No SchemaFactory that implements
+the schema language specified by: http://relaxng.org/ns/structure/1.0
+could be loaded
+
+Then in this article:
+
+http://www-128.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html
+
+I got the explanation:
+
+This is because, out of the box, the JDK doesn't include a RELAX NG
+validator. When the schema language isn't recognized,
+SchemaFactory.newInstance() throws an IllegalArgumentException.
+However, if you install a RELAX NG library such as Jing and a JAXP 1.3
+adapter, then it should produce the same answer the W3C schema does.
+
+So now our POM has Jing added to it (svn rev.40). But still this did
+not work. I need a JAXP adapter for this to work. I got one here:
+
+https://isorelax-jaxp-bridge.dev.java.net/
+
+But this adapter is not in Maven2 repo :-(
+
+I have requested the project maintainer to host this Jar in the maven2
+repo. If he does that, we are in luck. Else we have two options:
+
+1. We create the POM for this adapter and request this to be hosted:
+http://jira.codehaus.org/browse/MEV
+
+2. We drop RelaxNG and proceed with schema (no!!!!!!)
+
+Let us see what works out!
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec  5 15:19:07 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 5 Dec 2006 19:49:07 +0530
+Subject: [Xml2spreadsheet-dev] Project Roadmap For 1st Release
+Message-ID: <91ae21990612050619t71d66380vddbca9ba1b5e0cdf@mail.gmail.com>
+
+In term of release:
+
+* Alpha -> This should have all the features and styles we have in the
+test XMLs working for POI. This should also include the work being
+done by Bala for image embedding. Another feature I would love to have
+is URL support--but we need to see if JXL supports this feature, only
+then we will have this.
+
+* Beta -> JXL implementation having all the above mentioned functionality.
+
+* Final release -> Should test in multi-threaded environment and
+profile it for any memory leak, and of course, the other bug fixes.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Wed Dec  6 04:29:49 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Wed, 6 Dec 2006 08:59:49 +0530
+Subject: [Xml2spreadsheet-dev] RelaxNG Dropped, Going Forward With XSD
+Message-ID: <91ae21990612051929qe216261g2f7749ebf28cb066@mail.gmail.com>
+
+There were too many external dependencies, and technical
+implementation problems. I have generated the XSD with a good tool (no
+redundant stupid markups). So Bala, when u r working on embedded image
+issue (https://developer.berlios.de/feature/index.php?func=detailfeature&feature_id=2919&group_id=6203),
+u need to update the .xsd
+(src/main/resources/org/wiztools/xml2spreadsheet/xml2spreadsheet.xsd).
+
+I will be removing the .dtd and .rng by today evening from the code
+line. Anyone interested in comparing them may do so.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Fri Dec  8 08:04:37 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Fri, 8 Dec 2006 12:34:37 +0530
+Subject: [Xml2spreadsheet-dev] FYI fossdocs
+Message-ID: <91ae21990612072304j247e7071n401e1aa898111472@mail.gmail.com>
+
+We are making an effort to develop an FOSS documentation standards project here:
+
+http://tech.groups.yahoo.com/group/fossdocs/
+
+I have plans of suggesting our project to follow this standard. But it
+is not finalized.
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
+From subwiz at gmail.com  Tue Dec 19 08:08:11 2006
+From: subwiz at gmail.com (Subhash Chandran)
+Date: Tue, 19 Dec 2006 12:38:11 +0530
+Subject: [Xml2spreadsheet-dev] XML Editor
+Message-ID: <91ae21990612182308i56d5dbd0ta0b024515ec26e8d@mail.gmail.com>
+
+This seems to be a good editor for modifying XSD and XML:
+
+http://www.felixgolubov.com/XMLEditor/
+
+-- 
+Regards,
+Subhash Chandran S
+
+http://wiztools.org/project/XML2SpreadSheet/
+
+
